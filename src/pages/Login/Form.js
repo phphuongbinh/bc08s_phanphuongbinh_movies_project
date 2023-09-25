@@ -1,10 +1,29 @@
 import React from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Checkbox, Form, Input, message } from "antd";
+import axios from "axios";
+import { BASE_URL, configHeader } from "../../services/config";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setInfo } from "../../redux/userSlice";
 
 const FormLogin = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const onFinish = (values) => {
-    console.log("Received values of form: ", values);
+    axios
+      .post(`${BASE_URL}/QuanLyNguoiDung/DangNhap`, values, {
+        headers: configHeader(),
+      })
+      .then((result) => {
+        dispatch(setInfo(result.data.content));
+        message.success("Đăng nhập thành công");
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+        message.error("Đăng nhập thành công");
+      });
   };
   return (
     <div>
@@ -18,7 +37,7 @@ const FormLogin = () => {
         onFinish={onFinish}
       >
         <Form.Item
-          name="username"
+          name="taiKhoan"
           rules={[
             {
               required: true,
@@ -32,7 +51,7 @@ const FormLogin = () => {
           />
         </Form.Item>
         <Form.Item
-          name="password"
+          name="matKhau"
           rules={[
             {
               required: true,
