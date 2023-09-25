@@ -6,6 +6,7 @@ import { BASE_URL, configHeader } from "../../services/config";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setInfo } from "../../redux/userSlice";
+import { userLocalStorage } from "../../services/localServices";
 
 const FormLogin = () => {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ const FormLogin = () => {
       .then((result) => {
         dispatch(setInfo(result.data.content));
         message.success("Đăng nhập thành công");
+        userLocalStorage.set(result.data.content);
         navigate("/");
       })
       .catch((err) => {

@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { userLocalStorage } from "../services/localServices";
 
 const initialState = {
-  info: null,
+  info: userLocalStorage.get(),
 };
 
 export const userSlice = createSlice({
@@ -9,7 +10,6 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     setInfo: (state, action) => {
-      console.log(action);
       state.info = action.payload;
     },
   },

@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 
 const Home = () => {
   const { info } = useSelector((state) => state.userReducer);
-  console.log(info);
   return (
     <div>
       <Header />
