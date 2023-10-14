@@ -8,7 +8,7 @@ const Login = () => {
   console.log(info);
   return (
     <div className="h-screen bg-gradient-to-tr from-[#e9d8fd] via-[#caccf7] to-[#a6c1ee] flex items-center justify-center">
-      <div className="bg-white p-10 rounded-2xl flex gap-x-5 shadow shadow-purple-300 flex items-center">
+      <div className="flex items-center p-10 bg-white shadow rounded-2xl gap-x-5 shadow-purple-300">
         <Banner />
         <Form />
       </div>
