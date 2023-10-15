@@ -8,3 +8,5 @@ export const configHeader = () => {
 };
 
 export const BASE_URL = "https://movienew.cybersoft.edu.vn/api";
+
+export const URL_BANNER = "https://64d6fb222a017531bc12e7c8.mockapi.io/film";
