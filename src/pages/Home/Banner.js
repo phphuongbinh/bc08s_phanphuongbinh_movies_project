@@ -22,7 +22,7 @@ const Banner = () => {
 
   return (
     !isEmpty(movieCur) && (
-      <div className="banner text-white">
+      <div className="banner text-white relative">
         <div className="relative w-full h-[630px]">
           <img
             src={movieCur.bannerImg}
