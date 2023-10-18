@@ -8,3 +8,11 @@ export const getListMovie = () => {
     headers: configHeader(),
   });
 };
+
+export const getMovieByTheater = () => {
+  return axios({
+    url: `${BASE_URL}/QuanLyRap/LayThongTinLichChieuHeThongRap?maNhom=GP01`,
+    method: "GET",
+    headers: configHeader(),
+  });
+};
