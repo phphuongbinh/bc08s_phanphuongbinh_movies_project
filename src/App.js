@@ -3,6 +3,8 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Main from "./layout/Main";
+import DetailMovie from "./pages/DetailMovie/DetailMovie";
+import CineTicket from "./pages/CineTicket/CineTicket";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Routes>
         <Route path="" element={<Main />}>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/detail" element={<DetailMovie />}></Route>
+          <Route path="/cine-ticket" element={<CineTicket />}></Route>
         </Route>
         <Route path="/login" element={<Login />}></Route>
       </Routes>
