@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         body: ["Lato", "sans-serif"],
       },
+      animation: {
+        "spin-once": "spin 0.5s linear",
+      },
       colors: {
         primary: "rgb(168 85 247)",
       },
