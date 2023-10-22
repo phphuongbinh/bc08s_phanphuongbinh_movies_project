@@ -18,7 +18,7 @@ const DetailMovie = () => {
     onClose={() => setOpen(false)}
   /> */}
         {/* <button
-    className="w-16 h-16 flex items-center justify-center hover:scale-110 duration-300 bg-primary absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 rounded-full"
+    className="absolute z-20 flex items-center justify-center w-16 h-16 duration-300 -translate-x-1/2 -translate-y-1/2 rounded-full hover:scale-110 bg-primary top-1/2 left-1/2"
     onClick={() => setOpen(true)}
   >
     <svg
@@ -36,25 +36,29 @@ const DetailMovie = () => {
   </button> */}
         <div className="overlay absolute top-0 left-0 z-10 w-full h-full inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] via-[rgba(0,0,0,0.3] to-[transparent]"></div>
       </div>
-      <div className="absolute bottom-5 left-20 right-20 z-10 text-white">
+      <div className="absolute z-10 text-white bottom-5 left-20 right-20">
         <div className="space-x-2 ">
           <span>Chris Hemsworth</span>
           <span>Tom Hiddleston</span>
-          <h3 className="text-3xl font-semibold mt-3 mb-5">THOR</h3>
-          <div className="space-x-2 mb-10">
-            <span className="px-3 py-2 rounded-lg bg-white/40 backdrop-blur border border-gray-300 ">
+          <h3 className="mt-3 mb-5 text-3xl font-semibold">THOR</h3>
+          <div className="mb-10 space-x-2">
+            <span className="px-3 py-2 border border-gray-300 rounded-lg backdrop-blur-xl bg-white/40 ">
               Fantasy
             </span>
-            <span className="px-3 py-2 rounded-lg bg-white/40  backdrop-blur-lg border border-gray-300 ">
+            <span className="px-3 py-2 border border-gray-300 rounded-lg bg-white/40 backdrop-blur-lg ">
               Action
             </span>
-            <span className="px-3 py-2 rounded-lg bg-white/40  backdrop-blur-lg border border-gray-300 ">
+            <span className="px-3 py-2 border border-gray-300 rounded-lg bg-white/40 backdrop-blur-lg ">
               Adventure
             </span>
           </div>
         </div>
 
-        <div className="banner-list grid grid-cols-5 gap-10">
+        <div className="grid grid-cols-5 gap-4 banner-list">
+          <div className="h-[150px] rounded-2xl bg-primary"></div>
+          <div className="h-[150px] rounded-2xl bg-primary"></div>
+          <div className="h-[150px] rounded-2xl bg-primary"></div>
+          <div className="h-[150px] rounded-2xl bg-primary"></div>
           <div className="h-[150px] rounded-2xl bg-primary"></div>
         </div>
       </div>
