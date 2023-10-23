@@ -3,20 +3,25 @@ import React, { Fragment, useEffect, useState } from "react";
 import { URL_BANNER } from "../../services/config";
 import { isEmpty } from "lodash";
 import ModalVideo from "react-modal-video";
+import Spinner from "../../components/Spinner/Spinner";
 
 const Banner = () => {
   const [banner, setBanner] = useState([]);
   const [movieCur, setMovieCur] = useState({});
   const [isOpen, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
+    setIsLoading(true);
     axios
       .get(URL_BANNER)
       .then((result) => {
         setBanner(result.data);
         setMovieCur(result.data[0]);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
+        setIsLoading(false);
       });
   }, []);
 
@@ -93,6 +98,7 @@ const Banner = () => {
               ))}
           </div>
         </div>
+        <Spinner isLoading={isLoading} />
       </div>
     )
   );

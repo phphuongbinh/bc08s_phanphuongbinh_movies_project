@@ -5,6 +5,7 @@ import Login from "./pages/Login/Login";
 import Main from "./layout/Main";
 import DetailMovie from "./pages/DetailMovie/DetailMovie";
 import CineTicket from "./pages/CineTicket/CineTicket";
+import Spinner from "./components/Spinner/Spinner";
 
 function App() {
   return (
