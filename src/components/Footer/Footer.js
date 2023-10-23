@@ -17,22 +17,25 @@ const Footer = () => {
             </span>
           </Link>
           <p>
-            Sign up to our newsletter for special bribes, incentives and movies
-            listings each week.
+            Đăng ký để nhận những ưu đãi đặc biệt và danh sách phim mỗi tuần.
           </p>
           <button className="px-5 py-2 text-white bg-purple-500 rounded-lg shadow shadow-purple-400">
-            Join for free
+            Đăng ký ngay
           </button>
         </div>
         <div className="flex flex-col gap-y-2">
-          <Link className="hover:text-primary duration-300">About Flicks</Link>
-          <Link className="hover:text-primary duration-300">Food & drink</Link>
-          <Link className="hover:text-primary duration-300">Careers</Link>
-          <Link className="hover:text-primary duration-300">FAQs</Link>
-          <Link className="hover:text-primary duration-300">Contact us</Link>
+          <Link className="hover:text-primary duration-300">Về chúng tôi</Link>
+          <Link className="hover:text-primary duration-300">
+            Thức ăn và đồ uống
+          </Link>
+          <Link className="hover:text-primary duration-300">Tuyển dụng</Link>
+          <Link className="hover:text-primary duration-300">
+            Câu hỏi thường gặp
+          </Link>
+          <Link className="hover:text-primary duration-300">Liên hệ</Link>
         </div>
         <div>
-          <p>Download the app</p>
+          <p>Tải ứng dụng tại đây</p>
           <Link className="">
             <img
               className="w-[150px] mt-3"
@@ -40,7 +43,7 @@ const Footer = () => {
               alt=""
             />
           </Link>
-          <p className="mt-4 mb-3">Follow, like and subscribe</p>
+          <p className="mt-4 mb-3">Theo dõi, đăng ký kênh để nhận thông báo</p>
           <div className="flex gap-x-3">
             <Link>
               <span className="rounded-lg border border-white shadow-sm shadow-white w-8 h-8 inline-flex items-center justify-center hover:text-primary hover:shadow-primary hover:border-primary transition-all group">

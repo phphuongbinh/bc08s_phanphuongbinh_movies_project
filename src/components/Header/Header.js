@@ -50,7 +50,7 @@ const Header = () => {
     }
   };
   return (
-    <div className="absolute top-0 left-0 z-50 w-full h-20 shadow-lg bg-transparent">
+    <div className="absolute top-0 left-0 z-50 w-full h-20 bg-transparent">
       <div className="flex items-center justify-between h-full mx-auto max-w-[90%]">
         <Link to={"/"} className="flex items-end">
           <img
@@ -65,7 +65,7 @@ const Header = () => {
         <div className="flex items-center w-[250px] px-3 search gap-x-3 bg-slate-700 rounded-xl">
           <input
             type="text"
-            placeholder="Search for movies"
+            placeholder="Tìm kiếm phim yêu thích"
             className="flex-1 py-2 text-sm text-white bg-transparent border-none outline-none"
           />
           <button>
