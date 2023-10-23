@@ -4,6 +4,7 @@ import { URL_BANNER } from "../../services/config";
 import { isEmpty } from "lodash";
 import ModalVideo from "react-modal-video";
 import Spinner from "../../components/Spinner/Spinner";
+import Tag from "../../components/Tag/Tag";
 
 const Banner = () => {
   const [banner, setBanner] = useState([]);
@@ -63,12 +64,7 @@ const Banner = () => {
         <div className="absolute bottom-5 left-20 right-20 z-10">
           <div className="space-x-2 ">
             {movieCur.tags.map((item, index) => (
-              <span
-                className="px-3 py-1 border border-white rounded-lg"
-                key={index}
-              >
-                {item}
-              </span>
+              <Tag key={index} title={item} />
             ))}
             <h3 className="text-3xl font-semibold mt-3 mb-5">
               {movieCur.name}

@@ -16,3 +16,11 @@ export const getMovieByTheater = () => {
     headers: configHeader(),
   });
 };
+
+export const getInfoMovie = (id) => {
+  return axios({
+    url: `${BASE_URL}/QuanLyPhim/LayThongTinPhim?MaPhim=${id}`,
+    method: "GET",
+    headers: configHeader(),
+  });
+};
