@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { selectSeat } from "../../redux/movieSlice";
+import Seat from "./Seat";
 
 const SelectSeat = ({ listSeat }) => {
-  const dispatch = useDispatch();
   return (
     <div
       style={{ perspective: "1000px" }}
@@ -26,26 +26,14 @@ const SelectSeat = ({ listSeat }) => {
             return (
               <button
                 disabled
-                className="w-10 h-10 font-semibold duration-300 border-2 border-red-600 rounded-lg shadow-sm shadow-red-600 hover:border-primary hover:shadow-primary "
+                className="w-10 h-10 font-semibold duration-300 border-2 border-red-600 rounded-lg shadow-sm shadow-red-600"
                 key={item.maGhe}
               >
                 {item.tenGhe}
               </button>
             );
           }
-          return (
-            <button
-              className={`w-10 h-10 font-semibold duration-300 border-2 rounded-lg shadow-sm ${
-                item.loaiGhe === "Thuong"
-                  ? "border-white/50 shadow-white/80"
-                  : "border-yellow-600 shadow-yellow-600"
-              }  hover:border-primary hover:shadow-primary`}
-              key={item.maGhe}
-              onClick={() => dispatch(selectSeat(item))}
-            >
-              {item.tenGhe}
-            </button>
-          );
+          return <Seat item={item} />;
         })}
       </div>
     </div>
