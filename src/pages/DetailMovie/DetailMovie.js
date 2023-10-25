@@ -8,10 +8,13 @@ import "moment/locale/vi";
 import MovieList from "../Home/MovieList";
 import ModalVideo from "react-modal-video";
 import Tag from "../../components/Tag/Tag";
+import { useDispatch } from "react-redux";
+import { selectMovie } from "../../redux/movieSlice";
 const DetailMovie = () => {
   const { maPhim } = useParams();
   const [movie, setMovie] = useState({});
   const [isOpenTrailer, setIsOpenTrailer] = useState(false);
+  const dispatch = useDispatch();
   useEffect(() => {
     getInfoMovie(maPhim)
       .then((result) => {
@@ -20,7 +23,7 @@ const DetailMovie = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [maPhim]);
+  }, [maPhim, dispatch]);
   return (
     <div>
       <div className="relative w-full h-[630px]">

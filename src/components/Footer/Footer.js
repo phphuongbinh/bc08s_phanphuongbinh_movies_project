@@ -47,22 +47,22 @@ const Footer = () => {
           <div className="flex gap-x-3">
             <Link>
               <span className="rounded-lg border border-white shadow-sm shadow-white w-8 h-8 inline-flex items-center justify-center hover:text-primary hover:shadow-primary hover:border-primary transition-all group">
-                <i class="fa-brands fa-facebook-f group-hover:animate-spin-once"></i>
+                <i className="fa-brands fa-facebook-f group-hover:animate-spin-once"></i>
               </span>
             </Link>
             <Link>
               <span className="rounded-lg border border-white shadow-sm shadow-white w-8 h-8 inline-flex items-center justify-center hover:text-primary hover:shadow-primary hover:border-primary transition-all group">
-                <i class="fa-brands fa-instagram group-hover:animate-spin-once"></i>
+                <i className="fa-brands fa-instagram group-hover:animate-spin-once"></i>
               </span>
             </Link>
             <Link>
               <span className="rounded-lg border border-white shadow-sm shadow-white w-8 h-8 inline-flex items-center justify-center hover:text-primary hover:shadow-primary hover:border-primary transition-all group">
-                <i class="fa-brands fa-twitter group-hover:animate-spin-once"></i>
+                <i className="fa-brands fa-twitter group-hover:animate-spin-once"></i>
               </span>
             </Link>
             <Link>
               <span className="rounded-lg border border-white shadow-sm shadow-white w-8 h-8 inline-flex items-center justify-center hover:text-primary hover:shadow-primary hover:border-primary transition-all group">
-                <i class="fa-brands fa-tiktok group-hover:animate-spin-once"></i>
+                <i className="fa-brands fa-tiktok group-hover:animate-spin-once"></i>
               </span>
             </Link>
           </div>

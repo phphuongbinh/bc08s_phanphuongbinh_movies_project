@@ -12,6 +12,9 @@ module.exports = {
       colors: {
         primary: "rgb(168 85 247)",
       },
+      gridTemplateColumns: {
+        16: "repeat(16, minmax(0, 1fr))",
+      },
     },
   },
   plugins: [],
