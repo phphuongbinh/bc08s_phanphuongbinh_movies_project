@@ -7,13 +7,13 @@ const ItemMovie = ({ item }) => {
     <div className="rounded-2xl">
       <div className="h-[300px] mb-2 cursor-pointer">
         <img
-          className="w-full h-full object-cover rounded-2xl"
+          className="object-cover w-full h-full rounded-2xl"
           src={item.hinhAnh}
           alt=""
         />
       </div>
-      <h2 className="font-semibold truncate mb-2">{item.tenPhim}</h2>
-      <div className="flex justify-between items-center mb-2">
+      <h2 className="mb-2 font-semibold truncate">{item.tenPhim}</h2>
+      <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,13 +28,13 @@ const ItemMovie = ({ item }) => {
             />
           </svg>
 
-          <span className="text-gray-300 text-sm font-semibold ">
+          <span className="text-sm font-semibold text-gray-300 ">
             {item.danhGia}
           </span>
         </div>
         <span>{moment(item.ngayKhoiChieu).format("L")}</span>
       </div>
-      <button className="py-3 text-sm font-semibold rounded-lg flex items-center gap-2 text-primary bg-slate-800 w-full justify-center hover:bg-slate-700 transition-all">
+      <button className="flex items-center justify-center w-full gap-2 py-3 text-sm font-semibold transition-all rounded-lg text-primary bg-slate-800 hover:bg-slate-700">
         <NavLink to={`/detail/${item.maPhim}`}>Đặt vé ngay </NavLink>
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -13,7 +13,10 @@ const movieSlice = createSlice({
       state.seat.push(action.payload);
     },
     deselectSeat: (state, action) => {
-      state.seat.filter((item) => !item.maGhe);
+      const index = state.seat.findIndex(
+        (item) => item.maGhe === action.payload
+      );
+      state.seat.splice(index, 1);
     },
     selectSchedule: (state, action) => {
       state.detailSchedule = action.payload;
@@ -21,6 +24,6 @@ const movieSlice = createSlice({
   },
 });
 
-export const { selectSeat, selectSchedule } = movieSlice.actions;
+export const { selectSeat, selectSchedule, deselectSeat } = movieSlice.actions;
 
 export default movieSlice.reducer;

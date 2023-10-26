@@ -1,22 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { isEmpty } from "lodash";
-import Spinner from "../../components/Spinner/Spinner";
 import { useParams } from "react-router-dom";
-import { getInfoMovie } from "../../services/api";
+import { getInfoMovie, movieServ } from "../../services/api";
 import moment from "moment/moment";
 import "moment/locale/vi";
-import MovieList from "../Home/MovieList";
 import ModalVideo from "react-modal-video";
 import Tag from "../../components/Tag/Tag";
 import { useDispatch } from "react-redux";
-import { selectMovie } from "../../redux/movieSlice";
 const DetailMovie = () => {
   const { maPhim } = useParams();
   const [movie, setMovie] = useState({});
   const [isOpenTrailer, setIsOpenTrailer] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
-    getInfoMovie(maPhim)
+    movieServ
+      .getInfoMovie(maPhim)
       .then((result) => {
         setMovie(result.data.content);
       })
@@ -43,7 +40,7 @@ const DetailMovie = () => {
         <div className="overlay absolute top-0 left-0 z-10 w-full h-full inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] via-[rgba(0,0,0,0.3] to-[transparent]"></div>
         <div className="absolute z-10 text-white bottom-5 left-20 right-20 page-container">
           <div className="">
-            <h3 className="mt-3 mb-5  text-3xl mx-0 font-semibold">
+            <h3 className="mx-0 mt-3 mb-5 text-3xl font-semibold">
               {movie.tenPhim}
             </h3>
             <div className="mb-10 space-x-2">
@@ -91,45 +88,45 @@ const DetailMovie = () => {
               </span>
             </div>
             <div className="h-[150px] rounded-2xl bg-black/20 backdrop-filter backdrop-blur-md flex relative">
-              <p className="-rotate-90 absolute left-5 top-1/2 -translate-y-1/2 -translate-x-1/2 text-gray-500 font-semibold">
+              <p className="absolute font-semibold text-gray-500 -rotate-90 -translate-x-1/2 -translate-y-1/2 left-5 top-1/2">
                 Thời lượng
               </p>
-              <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold">
+              <p className="absolute text-2xl font-bold -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                 126 phút
               </p>
             </div>
             <div className="h-[150px] rounded-2xl bg-black/20 backdrop-filter backdrop-blur-md flex relative">
-              <p className="-rotate-90 absolute left-5 top-1/2 -translate-y-1/2 -translate-x-1/2 text-gray-500 font-semibold">
+              <p className="absolute font-semibold text-gray-500 -rotate-90 -translate-x-1/2 -translate-y-1/2 left-5 top-1/2">
                 Phát sóng
               </p>
-              <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold">
+              <p className="absolute text-2xl font-bold -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                 {moment(movie.ngayKhoiChieu).format("L")}
               </p>
             </div>
             <div className="h-[150px] rounded-2xl bg-black/20 backdrop-filter backdrop-blur-md flex relative">
-              <p className="-rotate-90 absolute left-5 top-1/2 -translate-y-1/2 -translate-x-1/2 text-gray-500 font-semibold">
+              <p className="absolute font-semibold text-gray-500 -rotate-90 -translate-x-1/2 -translate-y-1/2 left-5 top-1/2">
                 Đánh giá
               </p>
-              <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold">
+              <p className="absolute text-2xl font-bold -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                 8/10
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="page-container text-gray-300">
+      <div className="text-gray-300 page-container">
         <div className="mb-8">
-          <h3 className="uppercase text-gray-600 mb-2 text-xl font-semibold">
+          <h3 className="mb-2 text-xl font-semibold text-gray-600 uppercase">
             Mô tả
           </h3>
           <p>{movie.moTa}</p>
         </div>
-        <div className="mb-8">
-          <h3 className="uppercase text-gray-600 -mb-12 text-xl font-semibold">
+        {/* <div className="mb-8">
+          <h3 className="-mb-12 text-xl font-semibold text-gray-600 uppercase">
             Phim khác
           </h3>
           <MovieList />
-        </div>
+        </div> */}
       </div>
     </div>
   );

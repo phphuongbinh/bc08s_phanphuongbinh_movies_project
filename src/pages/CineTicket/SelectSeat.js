@@ -33,7 +33,7 @@ const SelectSeat = ({ listSeat }) => {
               </button>
             );
           }
-          return <Seat item={item} />;
+          return <Seat item={item} key={item.maGhe} />;
         })}
       </div>
     </div>

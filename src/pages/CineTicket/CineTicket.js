@@ -3,13 +3,14 @@ import SelectSeat from "./SelectSeat";
 import PaymentSeat from "./PaymentSeat";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getListTicketOffice } from "../../services/api";
+import { getListTicketOffice, movieServ } from "../../services/api";
 
 const CineTicket = () => {
   const { maLichChieu } = useParams();
   const [infoTicketOffice, setInfoTicketOffice] = useState({});
   useEffect(() => {
-    getListTicketOffice(maLichChieu)
+    movieServ
+      .getListTicketOffice(maLichChieu)
       .then((result) => {
         setInfoTicketOffice(result.data.content);
       })

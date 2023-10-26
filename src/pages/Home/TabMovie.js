@@ -1,11 +1,15 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { getListTicketOffice, getMovieByTheater } from "../../services/api";
+import {
+  getListTicketOffice,
+  getMovieByTheater,
+  movieServ,
+} from "../../services/api";
 
 import { ConfigProvider, Tabs } from "antd";
 import moment from "moment";
 import { useDispatch } from "react-redux";
 import { selectMovie, selectSchedule } from "../../redux/movieSlice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, redirect } from "react-router-dom";
 const onChange = (key) => {};
 
 const TabMovie = () => {
@@ -14,7 +18,8 @@ const TabMovie = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   useEffect(() => {
-    getMovieByTheater()
+    movieServ
+      .getScheduleByTheater()
       .then((result) => {
         setListTheater(result.data.content);
       })

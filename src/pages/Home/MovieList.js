@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getListMovie, movieServ } from "../../services/api";
-import moment from "moment/moment";
+import { movieServ } from "../../services/api";
 import Spinner from "../../components/Spinner/Spinner";
 import ItemMovie from "./ItemMovie";
 
@@ -10,7 +9,8 @@ const MovieList = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    getListMovie()
+    movieServ
+      .getListMovie()
       .then((result) => {
         setListMovie(result.data.content);
         setIsLoading(false);
