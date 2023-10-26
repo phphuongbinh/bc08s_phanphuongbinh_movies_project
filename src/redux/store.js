@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userReducer from "./userSlice";
+import userSlice from "./userSlice";
 import movieSlice from "./movieSlice";
+import spinnerSlice from "./spinnerSlice";
 
 export const store = configureStore({
   reducer: {
-    userReducer: userReducer,
-    movieReducer: movieSlice,
+    userSlice,
+    movieSlice,
+    spinnerSlice,
   },
 });

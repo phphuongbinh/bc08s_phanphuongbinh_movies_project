@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 const PaymentSeat = ({ info }) => {
-  const { seat } = useSelector((state) => state.movieReducer);
+  const { seat } = useSelector((state) => state.movieSlice);
   // console.log(seat.map((item) => item.giaVe).reducer());
   return (
     info && (

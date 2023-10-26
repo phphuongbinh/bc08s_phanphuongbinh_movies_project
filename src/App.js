@@ -10,6 +10,7 @@ import Spinner from "./components/Spinner/Spinner";
 function App() {
   return (
     <BrowserRouter>
+      <Spinner />
       <Routes>
         <Route path="" element={<Main />}>
           <Route path="/" element={<Home />}></Route>

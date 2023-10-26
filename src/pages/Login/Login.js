@@ -4,7 +4,7 @@ import Banner from "./Banner";
 import { useSelector } from "react-redux";
 
 const Login = () => {
-  const { info } = useSelector((state) => state.userReducer);
+  const { info } = useSelector((state) => state.userSlice);
   console.log(info);
   return (
     <div className="h-screen bg-gradient-to-tr from-[#e9d8fd] via-[#caccf7] to-[#a6c1ee] flex items-center justify-center">

@@ -6,7 +6,7 @@ const initialState = {
 };
 
 const movieSlice = createSlice({
-  name: "movieReducer",
+  name: "movieSlice",
   initialState,
   reducers: {
     selectSeat: (state, action) => {

@@ -7,7 +7,7 @@ import MovieList from "./MovieList";
 import TabMovie from "./TabMovie";
 
 const Home = () => {
-  const { info } = useSelector((state) => state.userReducer);
+  const { info } = useSelector((state) => state.userSlice);
   return (
     <Fragment>
       <Banner />

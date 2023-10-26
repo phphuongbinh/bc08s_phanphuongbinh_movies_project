@@ -5,7 +5,7 @@ import { userLocalStorage } from "../../services/localServices";
 
 const Header = () => {
   const navigate = useNavigate();
-  const { info } = useSelector((state) => state.userReducer);
+  const { info } = useSelector((state) => state.userSlice);
   const handleLogin = () => {
     navigate("/login");
   };

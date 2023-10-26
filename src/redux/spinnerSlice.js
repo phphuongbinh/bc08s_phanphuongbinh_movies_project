@@ -13,8 +13,8 @@ const spinnerSlice = createSlice({
       state.isLoading = true;
     },
     setLoadingOff: (state, actions) => {
-      console.log("loading false");
       state.isLoading = false;
+      console.log("loading false");
     },
   },
 });

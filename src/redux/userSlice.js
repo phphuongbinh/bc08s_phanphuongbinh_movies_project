@@ -6,7 +6,7 @@ const initialState = {
 };
 
 export const userSlice = createSlice({
-  name: "userReducer",
+  name: "userSlice",
   initialState,
   reducers: {
     setInfo: (state, action) => {
