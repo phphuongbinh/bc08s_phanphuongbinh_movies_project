@@ -6,11 +6,13 @@ import Main from "./layout/Main";
 import DetailMovie from "./pages/DetailMovie/DetailMovie";
 import CineTicket from "./pages/CineTicket/CineTicket";
 import Spinner from "./components/Spinner/Spinner";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
       <Spinner />
+      <ScrollToTop />
       <Routes>
         <Route path="" element={<Main />}>
           <Route path="/" element={<Home />}></Route>

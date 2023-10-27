@@ -45,3 +45,25 @@
   outline: 1px solid rgb(168 85 247);
   border-radius: 5px;
 }
+
+// Pagination
+
+:where(.css-dev-only-do-not-override-1vr7spz).ant-pagination
+  .ant-pagination-item
+  a,
+:where(.css-dev-only-do-not-override-1vr7spz).ant-pagination
+  .ant-pagination-prev,
+.anticon {
+  color: #fff;
+}
+
+:where(.css-dev-only-do-not-override-1vr7spz).ant-pagination
+  .ant-pagination-item-active
+  a,
+:where(.css-dev-only-do-not-override-1vr7spz).ant-pagination
+  .ant-pagination-item-active:hover,
+:where(.css-dev-only-do-not-override-1vr7spz).ant-pagination
+  .ant-pagination-item-active:hover
+  a {
+  @apply text-primary;
+}
