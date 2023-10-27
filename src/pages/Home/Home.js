@@ -13,7 +13,7 @@ const Home = () => {
     <Fragment>
       <Banner />
       {/* <MovieList /> */}
-      <PaginateMovie orgName={"afas"} perPage={5} />
+      <PaginateMovie />
       <TabMovie />
     </Fragment>
   );

@@ -103,7 +103,7 @@ const TabMovie = () => {
     });
   };
   return (
-    <div className="max-w-6xl mx-auto border shadow-md border-primary shadow-primary mt-28">
+    <div className="max-w-[90%] mx-auto border shadow-md border-primary shadow-primary mt-28">
       <ConfigProvider
         theme={{
           components: {

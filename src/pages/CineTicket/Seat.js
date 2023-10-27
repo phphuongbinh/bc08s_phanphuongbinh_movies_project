@@ -13,13 +13,13 @@ const Seat = ({ item }) => {
     }
     setChecked(!checked);
   };
-  console.log(checked);
+
   return (
     <button
-      className={`w-10 h-10 font-semibold duration-300  border-2 rounded-lg  shadow-sm border-${
+      className={`w-10 h-10 font-semibold duration-300 border-2 rounded-lg  shadow-sm border-${
         item.loaiGhe === "Thuong"
-          ? `${checked ? "blue-500" : "white/50"}`
-          : `${checked ? "blue-500" : "yellow-600"}`
+          ? `${checked ? "blue-600" : "white/50"}`
+          : `${checked ? "blue-600" : "yellow-600"}`
       } shadow-${
         item.loaiGhe === "Thuong"
           ? `${checked ? "blue-500" : "white/50"}`

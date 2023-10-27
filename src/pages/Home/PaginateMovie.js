@@ -15,7 +15,6 @@ export default function App() {
         console.log(err);
       });
   }, [page]);
-  console.log(page);
 
   const renderListMovie = () => {
     return movies?.items?.map((movie, index) => (
