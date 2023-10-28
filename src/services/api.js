@@ -10,6 +10,6 @@ export const movieServ = {
     https.get(`/QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${id}`),
   getListMovieWithPagination: (page) =>
     https.get(
-      `/QuanLyPhim/LayDanhSachPhimPhanTrang?maNhom=GP01&soTrang=${page}&soPhanTuTrenTrang=10`
+      `/QuanLyPhim/LayDanhSachPhimPhanTrang?maNhom=GP09&soTrang=${page}&soPhanTuTrenTrang=10`
     ),
 };
