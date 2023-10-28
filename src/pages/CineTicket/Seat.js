@@ -16,7 +16,7 @@ const Seat = ({ item }) => {
 
   return (
     <button
-      className={`w-10 h-10 font-semibold  duration-300 border-2 rounded-lg  shadow-sm ${
+      className={`w-10 h-10 font-semibold duration-300 border-2 rounded-lg  shadow-sm ${
         item.loaiGhe === "Thuong" ? "seat-normal" : `seat-vip`
       } ${
         checked ? "seat-checked" : "hover:border-primary hover:shadow-primary"
