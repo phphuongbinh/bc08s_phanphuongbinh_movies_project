@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Pagination } from "antd";
-import { movieServ } from "../../services/api";
-import ItemMovie from "./ItemMovie";
-export default function App() {
+import { movieServ } from "../../../services/api";
+import ItemMovie from "../ItemMovie";
+
+const PaginateMovie = () => {
   const [movies, setMovies] = useState({});
   const [page, setPage] = useState(1);
   useEffect(() => {
@@ -22,8 +23,8 @@ export default function App() {
     ));
   };
   return (
-    <div className="page-container">
-      <div className="grid grid-cols-5 gap-6 mb-6 text-white">
+    <div className="page-container max-w-[90%]">
+      <div className="grid grid-cols-1 gap-6 mb-6 text-white sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
         {renderListMovie()}
       </div>
       <Pagination
@@ -35,4 +36,6 @@ export default function App() {
       />
     </div>
   );
-}
+};
+
+export default PaginateMovie;

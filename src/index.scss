@@ -25,6 +25,21 @@
   }
 }
 
+@layer utilities {
+  .seat-normal {
+    border-color: rgb(255 255 255 / 0.5);
+    box-shadow: 0 1px 3px 0 rgb(255 255 255 / 0.5);
+  }
+  .seat-vip {
+    border-color: #ca8a04;
+    box-shadow: 0 1px 3px 0 #ca8a04;
+  }
+  .seat-checked {
+    border-color: #2563eb;
+    box-shadow: 0 1px 3px 0 #2563eb;
+  }
+}
+
 :where(.css-dev-only-do-not-override-e7dbnw).ant-tabs
   > .ant-tabs-nav
   .ant-tabs-nav-more {
