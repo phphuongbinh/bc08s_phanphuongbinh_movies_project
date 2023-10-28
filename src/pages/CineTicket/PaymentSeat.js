@@ -6,7 +6,7 @@ const PaymentSeat = ({ info }) => {
   // console.log(seat.map((item) => item.giaVe).reducer());
   return (
     info && (
-      <div className="px-3 mr-8 text-white border rounded-lg shadow-md border-primary shadow-primary">
+      <div className="px-3 py-3 text-white border rounded-lg shadow-md lg:mr-8 lg:py-0 border-primary shadow-primary">
         <h4 className="py-5 text-3xl text-center border-b text-primary border-white/50">
           <span>
             {seat.length > 0

@@ -19,7 +19,7 @@ const CineTicket = () => {
       });
   }, []);
   return (
-    <div className="grid grid-cols-3 mt-24">
+    <div className="grid grid-cols-1 gap-y-5  mt-24 xl:grid-cols-3 max-w-[90%] mx-auto">
       <SelectSeat listSeat={infoTicketOffice.danhSachGhe} />
       <PaymentSeat info={infoTicketOffice.thongTinPhim} />
     </div>
