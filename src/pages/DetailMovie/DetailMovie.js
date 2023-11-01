@@ -6,6 +6,7 @@ import "moment/locale/vi";
 import ModalVideo from "react-modal-video";
 import Tag from "../../components/Tag/Tag";
 import { useDispatch } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
 const DetailMovie = () => {
   const { maPhim } = useParams();
   const [movie, setMovie] = useState({});
@@ -22,6 +23,9 @@ const DetailMovie = () => {
         console.log(err);
       });
   }, [maPhim, dispatch]);
+  const handleBookTicket = () => {
+    console.log("dat ve thanh cong");
+  };
   return (
     <div>
       <div className="relative w-full h-[630px]">
@@ -69,7 +73,10 @@ const DetailMovie = () => {
                 />
               </svg>
             </div>
-            <div className=" h-[60px] hover:scale-105 duration-300 lg:h-[150px] gap-3 rounded-2xl bg-primary flex justify-center items-center cursor-pointer relative">
+            <div
+              onClick={handleBookTicket}
+              className=" h-[60px] hover:scale-105 duration-300 lg:h-[150px] gap-3 rounded-2xl bg-primary flex justify-center items-center cursor-pointer relative"
+            >
               <span className="text-md lg:text-2xl">Đặt vé ngay</span>
               <span>
                 <svg
@@ -123,6 +130,7 @@ const DetailMovie = () => {
           <p>{movie.moTa}</p>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

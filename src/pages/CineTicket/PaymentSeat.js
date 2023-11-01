@@ -1,9 +1,15 @@
+import { message } from "antd";
 import React from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const PaymentSeat = ({ info }) => {
   const { seat } = useSelector((state) => state.movieSlice);
-  // console.log(seat.map((item) => item.giaVe).reducer());
+  const navigate = useNavigate();
+  const handlePayment = () => {
+    message.success("Đặt vé thành công");
+    navigate("/");
+  };
   return (
     info && (
       <div className="px-3 py-3 text-white border rounded-lg shadow-md lg:mr-8 lg:py-0 border-primary shadow-primary">
@@ -51,7 +57,10 @@ const PaymentSeat = ({ info }) => {
             ))}
           </div>
         </div>
-        <button className="w-full px-5 py-4 mt-6 text-2xl font-bold rounded-lg bg-primary">
+        <button
+          onClick={handlePayment}
+          className="w-full px-5 py-4 mt-6 text-2xl font-bold rounded-lg bg-primary"
+        >
           Đặt vé
         </button>
       </div>
