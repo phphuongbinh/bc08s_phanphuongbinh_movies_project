@@ -15,6 +15,7 @@ const DetailMovie = () => {
     movieServ
       .getInfoMovie(maPhim)
       .then((result) => {
+        console.log(result.data.content);
         setMovie(result.data.content);
       })
       .catch((err) => {

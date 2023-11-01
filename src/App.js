@@ -7,6 +7,7 @@ import DetailMovie from "./pages/DetailMovie/DetailMovie";
 import CineTicket from "./pages/CineTicket/CineTicket";
 import Spinner from "./components/Spinner/Spinner";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           ></Route>
         </Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
     </BrowserRouter>
   );
