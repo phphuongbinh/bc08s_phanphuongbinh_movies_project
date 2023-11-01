@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const PageNotFound = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-indigo-900 relative overflow-hidden h-screen">
       <img
@@ -17,6 +19,12 @@ const PageNotFound = () => {
           <p className="font-extrabold text-8xl my-44 text-white animate-bounce">
             404
           </p>
+          <button
+            onClick={() => navigate("/")}
+            className="text-white font-semibold hover:scale-110 animate-pulse duration-300"
+          >
+            Trở về trang chủ
+          </button>
         </div>
       </div>
     </div>

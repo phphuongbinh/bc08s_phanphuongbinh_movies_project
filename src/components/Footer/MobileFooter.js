@@ -45,22 +45,22 @@ const MobileFooter = () => {
           </Link>
           <p className="mt-4 mb-3">Theo dõi, đăng ký kênh để nhận thông báo</p>
           <div className="flex justify-center gap-x-3">
-            <Link>
+            <Link target="_blank" to={"https://www.facebook.com/ImmaErauqs"}>
               <span className="inline-flex items-center justify-center w-8 h-8 transition-all border border-white rounded-lg shadow-sm shadow-white hover:text-primary hover:shadow-primary hover:border-primary group">
                 <i className="fa-brands fa-facebook-f group-hover:animate-spin-once"></i>
               </span>
             </Link>
-            <Link>
+            <Link target="_blank" to={"https://www.instagram.com/erauqs102/"}>
               <span className="inline-flex items-center justify-center w-8 h-8 transition-all border border-white rounded-lg shadow-sm shadow-white hover:text-primary hover:shadow-primary hover:border-primary group">
                 <i className="fa-brands fa-instagram group-hover:animate-spin-once"></i>
               </span>
             </Link>
-            <Link>
+            <Link target="_blank" to={"https://twitter.com/"}>
               <span className="inline-flex items-center justify-center w-8 h-8 transition-all border border-white rounded-lg shadow-sm shadow-white hover:text-primary hover:shadow-primary hover:border-primary group">
                 <i className="fa-brands fa-twitter group-hover:animate-spin-once"></i>
               </span>
             </Link>
-            <Link>
+            <Link target="_blank" to={"https://www.tiktok.com/en/"}>
               <span className="inline-flex items-center justify-center w-8 h-8 transition-all border border-white rounded-lg shadow-sm shadow-white hover:text-primary hover:shadow-primary hover:border-primary group">
                 <i className="fa-brands fa-tiktok group-hover:animate-spin-once"></i>
               </span>
