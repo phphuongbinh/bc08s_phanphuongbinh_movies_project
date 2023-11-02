@@ -99,3 +99,23 @@
 .tab-content-mobile .ant-tabs-content-holder {
   width: 100%;
 }
+
+.admin-page
+  :where(.css-dev-only-do-not-override-1vr7spz).ant-pagination
+  .ant-pagination-item
+  a,
+.admin-page
+  :where(.css-dev-only-do-not-override-1vr7spz).ant-pagination
+  .ant-pagination-jump-next
+  .ant-pagination-item-container
+  .ant-pagination-item-link-icon,
+.admin-page .anticon {
+  color: #000;
+}
+
+.admin-page
+  :where(.css-dev-only-do-not-override-1vr7spz).ant-pagination
+  .ant-pagination-item-active {
+  border-color: rgb(168 85 247);
+  color: rgb(168 85 247);
+}

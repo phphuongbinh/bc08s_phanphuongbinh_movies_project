@@ -13,3 +13,9 @@ export const movieServ = {
       `/QuanLyPhim/LayDanhSachPhimPhanTrang?maNhom=GP09&soTrang=${page}&soPhanTuTrenTrang=10`
     ),
 };
+
+export const userServ = {
+  get: () => https.get("/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=GP00"),
+  delete: (account) =>
+    https.delete(`/QuanLyNguoiDung/XoaNguoiDung?TaiKhoan=${account}`),
+};

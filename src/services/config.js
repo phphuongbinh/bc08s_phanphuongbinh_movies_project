@@ -20,12 +20,12 @@ export const https = axios.create({
   baseURL: BASE_URL,
   headers: {
     TokenCybersoft: TOKEN_CYBER,
-    Authorization: "bearer" + userLocalStorage.get()?.accessToken,
+    Authorization: "bearer " + userLocalStorage.get()?.accessToken,
   },
 });
 
 // Add a request interceptor
-axios.interceptors.request.use(
+https.interceptors.request.use(
   function (config) {
     store.dispatch(setLoadingOn());
     return config;
@@ -36,14 +36,13 @@ axios.interceptors.request.use(
 );
 
 // Add a response interceptor
-axios.interceptors.response.use(
+https.interceptors.response.use(
   function (response) {
     store.dispatch(setLoadingOff());
     return response;
   },
   function (error) {
     store.dispatch(setLoadingOff());
-
     return Promise.reject(error);
   }
 );

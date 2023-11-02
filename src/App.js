@@ -8,6 +8,10 @@ import CineTicket from "./pages/CineTicket/CineTicket";
 import Spinner from "./components/Spinner/Spinner";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import PrivateRoute from "./layout/PrivateRoute";
+import Admin from "./layout/Admin";
+import UserPage from "./pages/UserPage/UserPage";
+import MovieAdmin from "./pages/MovieAdmin/MovieAdmin";
 
 function App() {
   return (
@@ -22,6 +26,17 @@ function App() {
             path="/cine-ticket/:maLichChieu"
             element={<CineTicket />}
           ></Route>
+        </Route>
+        <Route
+          path="/admin"
+          element={
+            <PrivateRoute>
+              <Admin />
+            </PrivateRoute>
+          }
+        >
+          <Route path="" element={<UserPage />}></Route>
+          <Route path="/admin/movies" element={<MovieAdmin />}></Route>
         </Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>

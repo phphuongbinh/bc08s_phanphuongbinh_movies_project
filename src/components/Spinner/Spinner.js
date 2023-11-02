@@ -3,9 +3,10 @@ import { useSelector } from "react-redux";
 import { HashLoader } from "react-spinners";
 
 const Spinner = () => {
-  const { isLoading } = useSelector((state) => state.spinnerSlice);
+  let { isLoading } = useSelector((state) => state.spinnerSlice);
+  console.log(isLoading);
   return isLoading ? (
-    <HashLoader
+    <div
       style={{
         width: "100vw",
         height: "100vh",
@@ -18,8 +19,9 @@ const Spinner = () => {
         left: 0,
         zIndex: 99,
       }}
-      color="#a855f7"
-    />
+    >
+      <HashLoader size={150} color="#a855f7" />
+    </div>
   ) : (
     <></>
   );
