@@ -16,6 +16,7 @@ export const movieServ = {
 
 export const userServ = {
   get: () => https.get("/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=GP00"),
+  register: (data) => https.post("QuanLyNguoiDung/DangKy", data),
   delete: (account) =>
     https.delete(`/QuanLyNguoiDung/XoaNguoiDung?TaiKhoan=${account}`),
 };

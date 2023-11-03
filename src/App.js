@@ -12,6 +12,7 @@ import PrivateRoute from "./layout/PrivateRoute";
 import Admin from "./layout/Admin";
 import UserPage from "./pages/UserPage/UserPage";
 import MovieAdmin from "./pages/MovieAdmin/MovieAdmin";
+import Register from "./pages/Register/Register";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="/admin/movies" element={<MovieAdmin />}></Route>
         </Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
     </BrowserRouter>

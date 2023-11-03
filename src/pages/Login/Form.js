@@ -3,7 +3,7 @@ import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input, message } from "antd";
 import axios from "axios";
 import { BASE_URL, configHeader } from "../../services/config";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setInfo } from "../../redux/userSlice";
 import { userLocalStorage } from "../../services/localServices";
@@ -91,9 +91,9 @@ const FormLogin = () => {
             Log in
           </Button>
           Or{" "}
-          <a href="" className="text-blue-700">
+          <Link to="/register" className="text-blue-700">
             register now!
-          </a>
+          </Link>
         </Form.Item>
       </Form>
     </div>

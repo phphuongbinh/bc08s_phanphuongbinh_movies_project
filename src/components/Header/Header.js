@@ -17,6 +17,9 @@ const Header = () => {
     userLocalStorage.remove();
     window.location.reload();
   };
+  const handleRegister = () => {
+    navigate("/register");
+  };
   const renderUserNav = () => {
     if (info) {
       return (
@@ -46,7 +49,10 @@ const Header = () => {
           >
             Đăng Nhập
           </button>
-          <button className="px-5 py-2 text-purple-500 border border-purple-500 rounded-lg shadow shadow-purple-400">
+          <button
+            onClick={handleRegister}
+            className="px-5 py-2 text-purple-500 border border-purple-500 rounded-lg shadow shadow-purple-400"
+          >
             Đăng Ký
           </button>
         </>
