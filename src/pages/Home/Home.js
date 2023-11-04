@@ -1,9 +1,5 @@
-import React, { Fragment, useEffect, useState } from "react";
-import Header from "../../components/Header/Header";
-import { useSelector } from "react-redux";
-import Main from "../../layout/Main";
+import React, { Fragment } from "react";
 import Banner from "./Banner";
-import MovieList from "./MovieList";
 import TabMovie from "./TabMovie";
 import PaginateMovie from "./PaginateMovie/PaginateMovie";
 

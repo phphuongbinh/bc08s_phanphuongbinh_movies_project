@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { URL_BANNER } from "../../services/config";
 import { isEmpty } from "lodash";
 import ModalVideo from "react-modal-video";
