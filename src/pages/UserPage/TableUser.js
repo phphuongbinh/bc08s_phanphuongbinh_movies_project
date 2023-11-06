@@ -67,7 +67,6 @@ const TableUser = () => {
     },
   ];
   const handleDelete = (account) => {
-    console.log(account);
     userServ
       .delete(account)
       .then((result) => {
@@ -91,8 +90,6 @@ const TableUser = () => {
     phone: item.soDT,
   }));
   console.log(columnHeader);
-  return (
-    <Table columns={columns} dataSource={columnHeader} className="pl-[200px]" />
-  );
+  return <Table columns={columns} dataSource={columnHeader} />;
 };
 export default TableUser;

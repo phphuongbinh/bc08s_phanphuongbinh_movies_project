@@ -24,6 +24,9 @@ const PaginateMovie = () => {
   };
   return (
     <div className="page-container max-w-[90%]">
+      <h3 className="text-xl font-semibold mb-4 text-white/60">
+        PHIM ĐƯỢC XEM NHIỀU
+      </h3>
       <div className="grid grid-cols-1 gap-6 mb-6 text-white sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
         {renderListMovie()}
       </div>

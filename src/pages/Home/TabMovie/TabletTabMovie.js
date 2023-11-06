@@ -100,6 +100,9 @@ const TabletTabMovie = () => {
   };
   return (
     <div className="max-w-[90%] mx-auto border shadow-md border-primary shadow-primary mt-28">
+      <h3 className="text-xl font-semibold mb-4 text-white/60">
+        PHIM ĐƯỢC XEM NHIỀU
+      </h3>
       <ConfigProvider
         theme={{
           components: {

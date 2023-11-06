@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const ItemMovie = ({ item }) => {
   return (
     <div className="rounded-2xl">
-      <div className="h-[300px] mb-2 cursor-pointer">
+      <div className="h-[300px] mb-2">
         <img
           className="object-cover w-full h-full rounded-2xl"
           src={item.hinhAnh}
@@ -35,7 +35,7 @@ const ItemMovie = ({ item }) => {
         <span>{moment(item.ngayKhoiChieu).format("L")}</span>
       </div>
       <button className="flex items-center justify-center w-full gap-2 py-3 text-sm font-semibold transition-all rounded-lg text-primary bg-slate-800 hover:bg-slate-700">
-        <NavLink to={`/detail/${item.maPhim}`}>Đặt vé ngay </NavLink>
+        <NavLink to={`/detail/${item.maPhim}`}>Xem chi tiết </NavLink>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

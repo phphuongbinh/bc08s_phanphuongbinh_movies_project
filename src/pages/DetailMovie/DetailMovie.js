@@ -116,7 +116,7 @@ const DetailMovie = () => {
                 Đánh giá
               </p>
               <p className="absolute font-bold -translate-x-1/2 lg:-translate-y-1/2 text-md lg:text-2xl top-1/2 left-1/2">
-                8/10
+                {movie.danhGia}/10
               </p>
             </div>
           </div>

@@ -32,6 +32,16 @@ const Header = () => {
             />
             <span className="font-semibold ">{info.hoTen}</span>
           </div>
+          {info.maLoaiNguoiDung === "QuanTri" ? (
+            <button
+              onClick={() => navigate("/admin")}
+              className="px-5 py-2 text-white bg-purple-500 rounded-lg shadow cursor-pointer shadow-purple-400"
+            >
+              Admin Page
+            </button>
+          ) : (
+            <></>
+          )}
           <button
             onClick={handleLogout}
             className="px-5 py-2 text-white bg-purple-500 rounded-lg shadow cursor-pointer shadow-purple-400"

@@ -3,9 +3,9 @@ import TableUser from "./TableUser";
 
 const UserPage = () => {
   return (
-    <>
+    <div>
       <TableUser />
-    </>
+    </div>
   );
 };
 

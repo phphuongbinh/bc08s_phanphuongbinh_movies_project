@@ -4,6 +4,8 @@ import {
   MenuUnfoldOutlined,
   UploadOutlined,
   UserOutlined,
+  UserAddOutlined,
+  PlusCircleOutlined,
   VideoCameraOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, Button, theme } from "antd";
@@ -45,13 +47,26 @@ const Admin = () => {
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={["1"]}
           items={[
             {
               key: "1",
               icon: <UserOutlined />,
               label: "Users",
-              onClick: () => navigate("/admin"),
+              children: [
+                {
+                  key: "1",
+                  icon: <UserOutlined />,
+                  label: "Người dùng",
+                  onClick: () => navigate("/admin"),
+                },
+                {
+                  key: "4",
+                  icon: <UserAddOutlined />,
+                  label: "Thêm mới",
+                  onClick: () => navigate("/admin/add-user"),
+                },
+              ],
+              // onClick: () => navigate("/admin"),
             },
             {
               key: "2",
@@ -79,6 +94,7 @@ const Admin = () => {
             padding: 24,
             minHeight: 280,
             background: colorBgContainer,
+            marginLeft: 200,
           }}
         >
           <Outlet />

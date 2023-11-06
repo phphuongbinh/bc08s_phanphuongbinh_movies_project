@@ -15,8 +15,9 @@ export const movieServ = {
 };
 
 export const userServ = {
-  get: () => https.get("/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=GP00"),
+  get: () => https.get("/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=GP02"),
   register: (data) => https.post("QuanLyNguoiDung/DangKy", data),
   delete: (account) =>
     https.delete(`/QuanLyNguoiDung/XoaNguoiDung?TaiKhoan=${account}`),
+  add: (data) => https.post("/QuanLyNguoiDung/ThemNguoiDung", data),
 };

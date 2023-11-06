@@ -11,6 +11,7 @@ import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import PrivateRoute from "./layout/PrivateRoute";
 import Admin from "./layout/Admin";
 import UserPage from "./pages/UserPage/UserPage";
+import AddUserPage from "./pages/UserPage/AddUserPage";
 import MovieAdmin from "./pages/MovieAdmin/MovieAdmin";
 import Register from "./pages/Register/Register";
 
@@ -38,6 +39,7 @@ function App() {
         >
           <Route path="" element={<UserPage />}></Route>
           <Route path="/admin/movies" element={<MovieAdmin />}></Route>
+          <Route path="/admin/add-user" element={<AddUserPage />}></Route>
         </Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>

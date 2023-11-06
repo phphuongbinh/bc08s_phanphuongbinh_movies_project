@@ -4,7 +4,6 @@ import { HashLoader } from "react-spinners";
 
 const Spinner = () => {
   let { isLoading } = useSelector((state) => state.spinnerSlice);
-  console.log(isLoading);
   return isLoading ? (
     <div
       style={{

@@ -20,7 +20,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 80px;
+    padding-top: 40px;
   }
 }
 
@@ -118,4 +118,11 @@
   .ant-pagination-item-active {
   border-color: rgb(168 85 247);
   color: rgb(168 85 247);
+}
+
+.user-modal:where(.css-dev-only-do-not-override-1vr7spz).ant-modal
+  .ant-modal-footer
+  .ant-btn
+  + .ant-btn:not(.ant-dropdown-trigger) {
+  background-color: rgb(59, 130, 246);
 }

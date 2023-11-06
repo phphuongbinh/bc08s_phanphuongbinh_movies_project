@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { userLocalStorage } from "../../services/localServices";
 
 const TabletFooter = () => {
+  const user = userLocalStorage.get();
+  const navigate = useNavigate();
+
   return (
     <div className="max-w-[90%] mx-auto mt-32">
       <div className="grid grid-cols-2 gap-10 pb-6 text-white border-b border-white">
@@ -16,12 +20,25 @@ const TabletFooter = () => {
               licks
             </span>
           </Link>
-          <p>
-            Đăng ký để nhận những ưu đãi đặc biệt và danh sách phim mỗi tuần.
-          </p>
-          <button className="px-5 py-2 text-white bg-purple-500 rounded-lg shadow shadow-purple-400">
-            Đăng ký ngay
-          </button>
+          {!user?.taiKhoan ? (
+            <>
+              <p>
+                Đăng ký để nhận những ưu đãi đặc biệt và danh sách phim mỗi
+                tuần.
+              </p>
+              <button
+                onClick={() => navigate("/register")}
+                className="px-5 py-2 text-white bg-purple-500 rounded-lg shadow shadow-purple-400"
+              >
+                Đăng ký ngay
+              </button>
+            </>
+          ) : (
+            <p>
+              Cập nhật phim mới thường xuyên. Kiểm tra địa chỉ email để có những
+              thông tin phim mới nhất
+            </p>
+          )}
         </div>
         <div className="flex flex-col gap-y-2">
           <Link className="duration-300 hover:text-primary">Về chúng tôi</Link>
