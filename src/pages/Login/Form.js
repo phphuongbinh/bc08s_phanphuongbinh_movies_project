@@ -24,15 +24,15 @@ const FormLogin = () => {
       })
       .catch((err) => {
         console.log(err);
-        message.error("Đăng nhập thành công");
+        message.error("Đăng nhập thất bại");
       });
   };
   return (
     <div>
-      <h3 className="text-3xl text-blue-600 font-bold mb-8">Login</h3>
+      <h3 className="mb-8 text-3xl font-bold text-blue-600">Login</h3>
       <Form
         name="normal_login"
-        className="login-form w-full"
+        className="w-full login-form"
         initialValues={{
           remember: true,
         }}
@@ -77,7 +77,7 @@ const FormLogin = () => {
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
 
-          <a className="login-form-forgot text-blue-700" href="">
+          <a className="text-blue-700 login-form-forgot" href="">
             Forgot password
           </a>
         </Form.Item>
@@ -86,7 +86,7 @@ const FormLogin = () => {
           <Button
             type="primary"
             htmlType="submit"
-            className="login-form-button bg-blue-500 block w-full"
+            className="block w-full bg-blue-500 login-form-button"
           >
             Log in
           </Button>
