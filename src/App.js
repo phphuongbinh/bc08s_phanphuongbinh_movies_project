@@ -14,6 +14,7 @@ import UserPage from "./pages/UserPage/UserPage";
 import AddUserPage from "./pages/UserPage/AddUserPage";
 import MovieAdmin from "./pages/MovieAdmin/MovieAdmin";
 import Register from "./pages/Register/Register";
+import UpdateUser from "./pages/UserPage/UpdateUser";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="" element={<UserPage />}></Route>
           <Route path="/admin/movies" element={<MovieAdmin />}></Route>
           <Route path="/admin/add-user" element={<AddUserPage />}></Route>
+          <Route path="/admin/update" element={<UpdateUser />}></Route>
         </Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>

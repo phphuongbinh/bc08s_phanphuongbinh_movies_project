@@ -3,6 +3,7 @@ import { userLocalStorage } from "../services/localServices";
 
 const initialState = {
   info: userLocalStorage.get(),
+  infoUserUpdate: {},
 };
 
 export const userSlice = createSlice({
@@ -12,9 +13,12 @@ export const userSlice = createSlice({
     setInfo: (state, action) => {
       state.info = action.payload;
     },
+    updateUser: (state, action) => {
+      state.infoUserUpdate = action.payload;
+    },
   },
 });
 
-export const { setInfo } = userSlice.actions;
+export const { setInfo, updateUser } = userSlice.actions;
 
 export default userSlice.reducer;
