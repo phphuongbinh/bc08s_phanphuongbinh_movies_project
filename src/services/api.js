@@ -20,4 +20,6 @@ export const userServ = {
   delete: (account) =>
     https.delete(`/QuanLyNguoiDung/XoaNguoiDung?TaiKhoan=${account}`),
   add: (data) => https.post("/QuanLyNguoiDung/ThemNguoiDung", data),
+  update: (user) =>
+    https.post("/QuanLyNguoiDung/CapNhatThongTinNguoiDung", user),
 };

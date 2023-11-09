@@ -2,33 +2,40 @@ import React from "react";
 import { Form, Input, message, Select, Button } from "antd";
 import { userServ } from "../../services/api";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 const { Option } = Select;
 
-const AddUserPage = () => {
+const UpdateUser = () => {
   const navigate = useNavigate();
+  const { infoUserUpdate } = useSelector((state) => state.userSlice);
   const [form] = Form.useForm();
   const onFinish = (data) => {
     userServ
-      .add(data)
+      .update(data)
       .then((result) => {
-        console.log(result);
-        message.success("Đăng ký thành công");
+        message.success("Cập nhật thành công");
         navigate("/admin");
       })
       .catch((err) => {
-        message.error("Đăng ký thất bại");
         console.log(err);
       });
   };
   return (
     <div className=" h-[500px]">
-      <h2 className="mb-4 text-2xl font-semibold">Thêm người dùng mới</h2>
+      <h2 className="mb-4 text-2xl font-semibold">Cập nhật người dùng</h2>
       <Form
         form={form}
         name="register"
         onFinish={onFinish}
         initialValues={{
-          residence: ["zhejiang", "hangzhou", "xihu"],
+          hoTen: infoUserUpdate.hoTen,
+          taiKhoan: infoUserUpdate.taiKhoan,
+          taiKhoan: infoUserUpdate.taiKhoan,
+          email: infoUserUpdate.email,
+          soDt: infoUserUpdate.soDT,
+          matKhau: infoUserUpdate.taiKhoan,
+          maLoaiNguoiDung: infoUserUpdate.maLoaiNguoiDung,
+          maNhom: "GP01",
           prefix: "+84",
         }}
         className="grid grid-cols-2 gap-x-5 "
@@ -56,7 +63,11 @@ const AddUserPage = () => {
             },
           ]}
         >
-          <Input placeholder="Tài khoản" />
+          <Input
+            placeholder="Tài khoản"
+            defaultValue={infoUserUpdate.taiKhoan}
+            disabled
+          />
         </Form.Item>
 
         <Form.Item
@@ -72,7 +83,7 @@ const AddUserPage = () => {
             },
           ]}
         >
-          <Input placeholder="Email" />
+          <Input placeholder="Email" defaultValue={infoUserUpdate.email} />
         </Form.Item>
 
         <Form.Item
@@ -85,7 +96,10 @@ const AddUserPage = () => {
           ]}
           hasFeedback
         >
-          <Input.Password placeholder="Mật khẩu" />
+          <Input.Password
+            placeholder="Mật khẩu"
+            defaultValue={infoUserUpdate.matKhau}
+          />
         </Form.Item>
 
         <Form.Item
@@ -101,6 +115,7 @@ const AddUserPage = () => {
             style={{
               width: "100%",
             }}
+            defaultValue={infoUserUpdate.soDT}
             placeholder="Số điện thoại"
           />
         </Form.Item>
@@ -113,7 +128,10 @@ const AddUserPage = () => {
             },
           ]}
         >
-          <Select placeholder="Chọn loại người dùng">
+          <Select
+            placeholder="Chọn loại người dùng"
+            defaultValue={infoUserUpdate.maLoaiNguoiDung}
+          >
             <Option value="KhachHang">Khách Hàng</Option>
             <Option value="QuanTri">Quản trị</Option>
           </Select>
@@ -127,13 +145,13 @@ const AddUserPage = () => {
             },
           ]}
         >
-          <Select placeholder="Chọn nhóm người dùng">
-            <Option value="GP01">GP02</Option>
+          <Select placeholder="Chọn nhóm người dùng" defaultValue="GP01">
+            <Option value="GP01">GP01</Option>
           </Select>
         </Form.Item>
         <Form.Item className="col-span-2">
           <Button type="primary" htmlType="submit" className="mr-2 bg-blue-500">
-            Thêm người dùng
+            Cập nhật
           </Button>
         </Form.Item>
       </Form>
@@ -141,4 +159,4 @@ const AddUserPage = () => {
   );
 };
 
-export default AddUserPage;
+export default UpdateUser;
